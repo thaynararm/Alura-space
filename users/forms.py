@@ -13,7 +13,7 @@ class LoginForm(forms.Form):
         )
     )
 
-    password = forms.CharField(
+    login_password = forms.CharField(
         label='Senha',
         required=True,
         max_length=100,
@@ -27,7 +27,7 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    register_name = forms.CharField(
+    register_username = forms.CharField(
         label='Nome de Login',
         required=True,
         max_length=100,
