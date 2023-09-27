@@ -1,7 +1,7 @@
 from django import forms
 
 class LoginForm(forms.Form):
-    login_name = forms.CharField(
+    login_username = forms.CharField(
         label='Nome de Login',
         required=True,
         max_length=100,

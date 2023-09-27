@@ -10,7 +10,7 @@ def login(request):
         form = LoginForm(request.POST)
 
         if form.is_valid():
-            username = form['login_name'].value()
+            username = form['login_username'].value()
             password = form['login_password'].value()
 
         user = auth.authenticate(
@@ -28,7 +28,6 @@ def login(request):
             messages.error(request, 'Usuário e/ou senha incorreto!')
             return redirect('login')
 
-
     return render(request, 'users/login.html', {'form': form})
 
 def registers(request):
@@ -43,7 +42,7 @@ def registers(request):
                 messages.error(request, 'As senhas não coferem!')
                 return redirect('registers')
                 
-            username = form['register_name'].value()
+            username = form['register_username'].value()
             email = form['register_email'].value()
             password = form['register_password'].value()
 
